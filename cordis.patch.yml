@@ -1,0 +1,5 @@
+# dsh-plugin-a2a-console bundle patch.
+# 插件自带的挂载层：insert 一条 loader 条目即可（与 dsh-plugin-ai-gateway 同款形态）。
+- insert:
+    - id: a2a-console
+      name: 'dsh-plugin-a2a-console'

@@ -1,0 +1,29 @@
+{
+  "name": "dsh-plugin-a2a-console",
+  "version": "0.1.0",
+  "description": "Agent2API 控制台 —— 账号管理 / 签到 / 任务三大功能从 agent2api 面板剥离后的 dsh 插件形态",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": ["lib", "scripts", "cordis.patch.yml", "README.md"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs"
+  },
+  "dsh": {
+    "platform": "web",
+    "bundle": { "patch": "cordis.patch.yml" }
+  },
+  "deepseekPlugin": {
+    "schemaVersion": 3,
+    "id": "a2a-console",
+    "entryPath": "/a2a",
+    "healthPath": "/a2a/ready",
+    "permissions": ["a2a-console:access"],
+    "configuration": { "entryId": "a2a-console", "auth": "consumer" }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.2-rc.1"
+  },
+  "engines": { "node": ">=22.5" },
+  "license": "MIT"
+}
